@@ -1,0 +1,19 @@
+
+# not use '-' in variable name
+# not use '_' in container name
+
+[all:vars]
+ansible_python_interpreter=/usr/bin/python3
+nsible_user=ubuntu
+
+enable_maas=1
+enable_lxd=1
+enable_static=1
+enable_admin=1
+
+[server]
+### NAT 
+server ansible_host=10.228.14.3
+### bridge
+#server ansible_host=192.168.0.3
+
