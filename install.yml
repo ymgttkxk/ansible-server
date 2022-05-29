@@ -4,6 +4,8 @@
 - hosts: server
   gather_facts: false
   roles:
-  - role: roles/maas
-  - role: roles/lxd
-  
+  - role: roles/12-resource
+  - role: roles/21-enviroment
+    #  - role: roles/lxd
+    #  - role: roles/maas
+ 
