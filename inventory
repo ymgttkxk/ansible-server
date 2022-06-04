@@ -1,4 +1,3 @@
-
 # not use '-' in variable name
 # not use '_' in container name
 
@@ -6,14 +5,26 @@
 ansible_python_interpreter=/usr/bin/python3
 nsible_user=ubuntu
 
-enable_maas=1
-enable_lxd=1
-enable_static=1
-enable_admin=1
+#enable_maas=1
+#enable_lxd=1
+#enable_static=1
+#enable_admin=1
 
-[server]
-### NAT 
-server ansible_host=10.228.14.3
+#set_proxy=0
+#set_security=0
+set_network=1
+
+# proxy for apt and snap
+#proxy_url=http://{user}:{pass}@{url}:{port}
+
+### static IPv4 address
+### IPv4
+eth_name=eth1
+eth_addrs=192.168.0.16/24
+eth_gw=192.168.0.1
+eth_ns=192.168.0.1
 ### bridge
-#server ansible_host=192.168.0.3
+#br_name
 
+[all]
+localhost
